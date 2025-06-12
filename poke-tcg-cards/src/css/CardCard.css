@@ -1,31 +1,25 @@
-.pack-card {
+.card-card {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
     border-radius: 10px;
+    border: none;
     transition: 0.3s ease-out;
+    cursor: pointer;
 }
-.pack-card:hover {
+.card-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
 }
 
-.pack-content {
-    padding: 20px;
+.card-content {
+    padding: 10px;
 }
 
-.pack-card img {
+.card-image img {
     max-width: 100%;
 }
 
-a{
-    text-decoration: none;
-}
-
-.pack-info {
-    text-align: center;
-}
-
-.pack-info h2 {
+.card-info h2 {
     margin-top: 10px;
     padding: 5px;
     background-color: rgb(245, 245, 245);
