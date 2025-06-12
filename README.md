@@ -1,1 +1,1 @@
-# poke-tcg-cards
+Pokemon TCG Pocket Database
