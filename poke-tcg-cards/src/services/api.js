@@ -1,4 +1,4 @@
-export const getPacks = async () => {
+export const getSets = async () => {
     try {
         const res = await fetch('https://api.tcgdex.net/v2/en/series/tcgp');
         

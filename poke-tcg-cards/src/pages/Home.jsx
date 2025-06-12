@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getPacks, Test } from "../services/api";
-import PackCard from "../components/PackCard";
+import { getSets } from "../services/api";
+import PackCard from "../components/SetCard";
 import "../css/Home.css"
 
 const Home = () => {
@@ -10,9 +10,9 @@ const Home = () => {
 
     // Fetch card set data
     useEffect(() => {
-        const loadPacks = async () => {
+        const loadSets = async () => {
             try {
-                const packData = await getPacks();
+                const packData = await getSets();
                 setPacks(packData);
             }
             catch (err) {
@@ -23,8 +23,7 @@ const Home = () => {
             }
         }
 
-        loadPacks();
-        Test();
+        loadSets();
     }, [])
 
     return (
