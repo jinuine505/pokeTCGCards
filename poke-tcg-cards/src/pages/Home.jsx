@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getPacks } from "../services/api";
+import { getPacks, Test } from "../services/api";
 import PackCard from "../components/PackCard";
 import "../css/Home.css"
 
@@ -24,6 +24,7 @@ const Home = () => {
         }
 
         loadPacks();
+        Test();
     }, [])
 
     return (

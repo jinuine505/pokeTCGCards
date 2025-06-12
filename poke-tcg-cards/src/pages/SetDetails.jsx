@@ -14,7 +14,7 @@ const SetDetails = () => {
     useEffect(() => {
         const loadCards = async () => {
             try {
-                const cards = await getCardsFromSet(packId);
+                const cards = await getCardsFromSet(packId.toLowerCase().replace(/-/g, ''));
                 setCards(cards);
             } catch (err) {
                 setError(err);

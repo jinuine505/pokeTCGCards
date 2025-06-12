@@ -18,7 +18,7 @@ export const getPacks = async () => {
 
 export const getCardsFromSet = async (set) => {
     try {
-        const res = await fetch(`https://api.tcgdex.net/v2/en/sets/${set}`);
+        const res = await fetch(`https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json`);
         
         if (!res.ok)
         {
@@ -26,7 +26,8 @@ export const getCardsFromSet = async (set) => {
         }
 
         const data = await res.json();
-        return data.cards;
+        const filteredCards = data.filter(card => card.id.startsWith(`${set}-`));
+        return filteredCards;
     }
 
     catch(err) {

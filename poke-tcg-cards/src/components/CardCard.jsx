@@ -5,7 +5,7 @@ const CardCard = ({ card }) => {
         <button className="card-card">
             <div className="card-content">
                 <div className="card-image">
-                    <img src={`${card.image}/low.webp`} alt={card.id} />
+                    <img src={`${card.image}`} alt={card.id} />
                 </div>
                 <div className="card-info">
                     <h2>{card.name}</h2>
