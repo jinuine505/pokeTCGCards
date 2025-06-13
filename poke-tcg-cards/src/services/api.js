@@ -19,7 +19,7 @@ export const getSets = async () => {
 export const getSetById = async (id) => {
     try {
         const sets = await getSets();
-        const set = sets.find((set) => set.id.toLowerCase() === id.toLowerCase());
+        const set = sets.find((set) => set.id.toLowerCase().replace(/-/g, '') === id.toLowerCase().replace(/-/g, ''));
 
         if (!set) {
             throw new Error("Set not found");
@@ -43,8 +43,26 @@ export const getCardsFromSet = async (set) => {
         }
 
         const data = await res.json();
-        const filteredCards = data.filter((card) => card.id.startsWith(`${set}-`));
+        const formattedSet = set.toLowerCase().replace(/-/g, '');
+        const filteredCards = data.filter((card) => card.id.startsWith(`${formattedSet}-`));
         return filteredCards;
+    }
+
+    catch(err) {
+        throw err;
+    }
+}
+
+export const getCardFromSetAndNum = async (set, cardNum) => {
+    try {
+        const cards = await getCardsFromSet(set);
+        const card = cards.find((card) => (card.id.split("-")[1] === cardNum))
+        
+        if (!card)
+        {
+            throw new Error('Card not found');
+        }
+        return card;
     }
 
     catch(err) {

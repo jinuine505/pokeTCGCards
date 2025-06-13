@@ -1,0 +1,34 @@
+.card-details-card {
+    position: relative;
+    max-width: calc(100% - 40px);
+    margin: 20px auto 0;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+    border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+}
+
+.card-info {
+    display: flex;
+    font-size: x-large;
+    line-height: 2;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 0 0 0.2em white;
+}
+
+@media (max-width: 725px) {
+  .card-content {
+    flex-direction: column;
+  }
+  
+  .card-info {
+    font-size: large;
+    line-height: 1.2;
+  }
+}

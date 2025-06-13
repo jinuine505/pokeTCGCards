@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Favorites from './pages/Favorites'
 import { Routes, Route } from 'react-router'
 import SetDetails from './pages/SetDetails'
+import CardDetails from './pages/CardDetails'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />}/>
              <Route path="/favorites" element={<Favorites />}/>
              <Route path="/:packId" element={<SetDetails />}/>
+             <Route path="/:packId/:cardNum" element={<CardDetails />}/>
           </Routes>
         </div>
       </div>

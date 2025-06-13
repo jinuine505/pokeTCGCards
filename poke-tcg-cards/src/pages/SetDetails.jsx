@@ -16,7 +16,7 @@ const SetDetails = () => {
         const loadCards = async () => {
             try {
                 // Set card data from set
-                const cards = await getCardsFromSet(packId.toLowerCase().replace(/-/g, ''));
+                const cards = await getCardsFromSet(packId);
                 setCards(cards);
 
                 // Set the set name
@@ -24,8 +24,7 @@ const SetDetails = () => {
                 setSetName(set.name);
             } catch (err) {
                 setError(err);
-            }
-            finally {
+            } finally {
                 setLoading(false);
             }
         }
@@ -39,7 +38,7 @@ const SetDetails = () => {
             {error && <div className="error">{error}</div>}
             {isLoading ? (<div className="loading">Loading...</div>) : (<div className="card-grid">
                 {cards.map((card) => (
-                    <CardCard card={card} key={card.id} />
+                    <CardCard card={card} set={packId} key={card.id} />
                 ))}
             </div>)}
         </div>

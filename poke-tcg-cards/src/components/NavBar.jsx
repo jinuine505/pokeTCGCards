@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import '../css/NavBar.css'
-import logo from '/pokeball.webp'
+import logo from '../assets/pokeball.webp'
 
 const NavBar = () => {
     return (
