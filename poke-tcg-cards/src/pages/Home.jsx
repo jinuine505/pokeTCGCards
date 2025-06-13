@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getSets } from "../services/api";
-import PackCard from "../components/SetCard";
+import SetCard from "../components/SetCard";
 import "../css/Home.css"
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
 
             {isLoading ? (<div className="loading">Loading...</div>) : (<div className="pack-grid">
                 {packs.map((pack, index) => (
-                    <PackCard pack={pack} key={index} />
+                    <SetCard pack={pack} key={index} />
                 ))}
             </div>)}
 
