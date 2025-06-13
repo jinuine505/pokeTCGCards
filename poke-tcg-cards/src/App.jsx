@@ -1,10 +1,10 @@
-import './App.css'
-import NavBar from './components/NavBar'
-import Home from './pages/Home'
-import Favorites from './pages/Favorites'
-import { Routes, Route } from 'react-router'
-import SetDetails from './pages/SetDetails'
-import CardDetails from './pages/CardDetails'
+import './App.css';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Favorites from './pages/Starred';
+import { Routes, Route } from 'react-router';
+import SetDetails from './pages/SetDetails';
+import CardDetails from './pages/CardDetails';
 
 function App() {
 

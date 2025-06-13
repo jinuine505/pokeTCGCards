@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getSetById } from "../services/api";
-import "../css/CardDetailsCard.css"
-import "../css/CardDetailsStyling.css"
+import "../css/CardDetailsCard.css";
+import "../css/CardDetailsStyling.css";
 
 const CardDetailsCard = ({ card }) => {
     const isRare = card.rarity.includes('☆') ||card.rarity.includes('♕') || card.fullart === "Yes";

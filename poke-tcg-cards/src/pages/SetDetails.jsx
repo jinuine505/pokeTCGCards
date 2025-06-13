@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { getCardsFromSet, getSetById } from "../services/api";
 import { useEffect, useState } from "react";
 import CardCard from "../components/CardCard";
-import "../css/SetDetails.css"
+import "../css/SetDetails.css";
 
 const SetDetails = () => {
     const { packId } = useParams();

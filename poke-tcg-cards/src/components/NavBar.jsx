@@ -1,6 +1,6 @@
-import { Link } from 'react-router'
-import '../css/NavBar.css'
-import logo from '../assets/pokeball.webp'
+import { Link } from 'react-router';
+import '../css/NavBar.css';
+import logo from '../assets/pokeball.webp';
 
 const NavBar = () => {
     return (
@@ -10,7 +10,7 @@ const NavBar = () => {
             </div>
             <div className="nav-links">
                 <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/favorites">Favorites</Link>
+                <Link className="nav-link" to="/favorites">Starred</Link>
             </div>
         </nav>
     );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css/SetCard.css"
+import "../css/SetCard.css";
 
 const PackCard = ({ pack }) => {
     return (
