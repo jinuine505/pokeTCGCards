@@ -4,7 +4,7 @@ import "../css/CardDetailsCard.css"
 import "../css/CardDetailsStyling.css"
 
 const CardDetailsCard = ({ card }) => {
-    const isRare = card.fullart === "Yes";
+    const isRare = card.rarity.includes('☆') ||card.rarity.includes('♕') || card.fullart === "Yes";
 
     return (
         <div className={`card-details-card ${isRare ? "gold-shadow" : ""} type-${card.type?.toLowerCase()}`}>
