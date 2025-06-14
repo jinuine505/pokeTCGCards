@@ -9,13 +9,17 @@
 }
 
 /* Set info starts */
-.card-set p {
+.info-subheader {
     font-size: large;
     margin-bottom: 10px;
     padding: 5px;
     background-color: rgb(245, 245, 245);
     border-radius: 10px;
     color: rgb(13, 13, 13);
+}
+
+.card-related p {
+    margin-top: 10px;
 }
 
 .card-set .set-card:hover {

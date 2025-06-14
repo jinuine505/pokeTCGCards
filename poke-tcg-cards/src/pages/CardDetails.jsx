@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
 import useCardDetails from "../hooks/useCardDetails";
 import SetCard from "../components/SetCard";
-import "../css/SetCard.css"
-import CardDetailsCard from "../components/CardDetailsCard";
 import "../css/CardDetails.css"
+import VersionsList from "../components/VersionsList";
+import CardDetailsCard from "../components/CardDetailsCard";
 
 const CardDetails = () => {
     const { setId, cardNum } = useParams();
@@ -23,8 +23,12 @@ const CardDetails = () => {
             <CardDetailsCard card={card} />
             <div className="card-additional-info">
                 <div className="card-set">
-                    <p className={`type-${card.type?.toLowerCase()}`}>Found in</p>
+                    <p className={`info-subheader type-${card.type?.toLowerCase()}`}>Found in</p>
                     <SetCard set={set} />
+                </div>
+                <div className="card-related">
+                    <p className={`info-subheader type-${card.type?.toLowerCase()}`}>Versions</p>
+                    <VersionsList setId={setId} card={card} />
                 </div>
             </div>
         </div>
