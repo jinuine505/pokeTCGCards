@@ -5,9 +5,14 @@
     border-radius: 10px;
     transition: 0.3s ease-out;
 }
+
 .set-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
+}
+
+.set-card:active {
+    transform: scale(.95);
 }
 
 .set-card .set-content {

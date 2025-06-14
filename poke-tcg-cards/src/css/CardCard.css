@@ -11,6 +11,10 @@
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
 }
 
+.card-card:active {
+    transform: scale(.95);
+}
+
 .card-card .card-content {
     padding: 10px;
 }

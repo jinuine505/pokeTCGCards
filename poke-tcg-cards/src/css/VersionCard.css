@@ -14,8 +14,17 @@
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
 }
 
+.version-card:active {
+    transform: scale(.98);
+}
+
 .version-card p {
     color: rgb(13, 13, 13);
+}
+
+.version-card img {
+    max-width: 50px;
+    margin-right: 20px;
 }
 
 .version-card .card-content {
@@ -26,7 +35,7 @@
 }
 
 .version-card .card-name {
-    width: 50px;
+    width: 0;
     text-align: left;
 }
 
@@ -36,7 +45,7 @@
 }
 
 .version-card .card-rarity {
-    width: 50px;
+    width: 70px;
     text-align: right;
 }
 
@@ -53,6 +62,10 @@
     }
 
     .version-card .card-rarity {
-    width: auto;
-}
+        width: auto;
+    }
+
+    .version-card img {
+        margin-right: 0;
+    }
 }

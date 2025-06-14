@@ -26,12 +26,11 @@
     width: 50%;
 }
 
-.card-details .card-related p {
-    margin-top: 10px;
-}
-
 .card-set .set-card:hover {
     transform: scale(1.02);
+}
+.card-set .set-card:active {
+    transform: scale(.98);
 }
 
 @media (max-width: 725px) {
