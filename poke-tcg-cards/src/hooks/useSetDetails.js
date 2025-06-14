@@ -5,10 +5,14 @@ import useSets from "./useSet";
 const formatId = (id) => id.toLowerCase().replace(/-/g, '');
 
 const getSetById = (sets, setId) => {
+    // Assign the set from given setId, or else null
+    if (!Array.isArray(sets)) return null;
     return sets.find((set) => formatId(set.id) === formatId(setId));
 }
 
 const getCardsById = (cards, setId) => {
+    // Assign the cards from given setId, or else empty array
+    if (!Array.isArray(cards)) return [];
     return cards.filter((card) => card.id.startsWith(`${formatId(setId)}-`));
 }
 
@@ -22,11 +26,8 @@ const useSetDetails = (setId) => {
     // Consolidate isError from both queries
     const isError = setsError || cardsError;
     
-    // Assign the set from given setId, or else null
-    const set = sets ? getSetById(sets, setId) : null;
-
-    // Assign the cards from given setId, or else empty array
-    const setCards = cards ? getCardsById(cards, setId) : [];
+    const set = getSetById(sets, setId);
+    const setCards = getCardsById(cards, setId);
 
     return { set, setCards, isPending, isError};
 }

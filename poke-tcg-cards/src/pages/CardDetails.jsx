@@ -1,33 +1,23 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getCardFromSetAndNum } from "../services/api";
+import useCardDetails from "../hooks/useCardDetails";
 import CardDetailsCard from "../components/CardDetailsCard";
 
 const CardDetails = () => {
     const { setId, cardNum } = useParams();
-    const [card, setCard] = useState(null);
-    const [isLoading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+   
+    // Load the set and card given the setId and the cardNum
+    const {set, card, isPending, isError} = useCardDetails(setId, cardNum);
 
-    // Fetch the card data
-    useEffect(() => {
-        const loadCard = async () => {
-            try {
-                const fetchedCard = await getCardFromSetAndNum(setId, cardNum);
-                setCard(fetchedCard);
-            } catch (err) {
-                setError(err);
-            } finally {
-                setLoading(false);
-            }
-        }
+    // Check loading state or errors
+    if (isPending) return <div className="loading">Loading...</div>
+    if (isError) return <div className="error">Error loading data</div>;
 
-        loadCard();
-    }, [cardNum])
+    if (!set) return <div className="error">Set not found</div>
+    if (!card) return <div className="error">{`Card ${cardNum} not found in ${set.name}`}</div>
 
     return (
         <div className="card-details">
-            {!isLoading && <CardDetailsCard card={card}/>}
+            <CardDetailsCard card={card}/>
         </div>
     );
 }
