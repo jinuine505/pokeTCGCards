@@ -4,7 +4,7 @@ import { getCardFromSetAndNum } from "../services/api";
 import CardDetailsCard from "../components/CardDetailsCard";
 
 const CardDetails = () => {
-    const { packId, cardNum } = useParams();
+    const { setId, cardNum } = useParams();
     const [card, setCard] = useState(null);
     const [isLoading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const CardDetails = () => {
     useEffect(() => {
         const loadCard = async () => {
             try {
-                const fetchedCard = await getCardFromSetAndNum(packId, cardNum);
+                const fetchedCard = await getCardFromSetAndNum(setId, cardNum);
                 setCard(fetchedCard);
             } catch (err) {
                 setError(err);
@@ -24,8 +24,6 @@ const CardDetails = () => {
 
         loadCard();
     }, [cardNum])
-
-    console.log(card);
 
     return (
         <div className="card-details">

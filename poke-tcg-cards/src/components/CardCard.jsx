@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 
-const CardCard = ({ card, set }) => {
+const CardCard = ({ card, setId }) => {
     const cardNum = card.id.split("-")[1];
 
     const handleClick = (e) => {
@@ -13,7 +13,7 @@ const CardCard = ({ card, set }) => {
     
     return (
         <div className="card-card">
-            <Link to={`/${set}/${cardNum}`}>
+            <Link to={`/${setId}/${cardNum}`}>
                 <div className="card-content">
                     <div className="card-image">
                         <img src={`${card.image}`} alt={card.id} title={card.name} />

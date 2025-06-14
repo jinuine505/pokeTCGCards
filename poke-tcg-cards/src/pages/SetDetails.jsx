@@ -20,7 +20,7 @@ const SetDetails = () => {
             <div className="set-name"><h2>{`${set.name} (${setId})`}</h2></div>
             {!(setCards.length === 0) ? (<div className="card-grid">
                 {setCards.map((card) => (
-                    <CardCard card={card} set={setId} key={card.id} />
+                    <CardCard card={card} setId={setId} key={card.id} />
                 ))}
             </div>) : <div className="error">No cards available</div>}
         </div>
