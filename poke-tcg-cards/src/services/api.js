@@ -1,19 +1,11 @@
 export const getSets = async () => {
-    try {
-        const res = await fetch('https://api.tcgdex.net/v2/en/series/tcgp');
-        
-        if (!res.ok)
-        {
-            throw new Error('Unable to load data');
-        }
+    const res = await fetch('https://api.tcgdex.net/v2/en/series/tcgp');
 
-        const data = await res.json();
-        return data.sets;
+    if (!res.ok) {
+        throw new Error('Unable to load data');
     }
-
-    catch(err) {
-        throw err;
-    }
+    const data = await res.json();
+    return data.sets;
 }
 
 export const getSetById = async (id) => {
@@ -24,21 +16,20 @@ export const getSetById = async (id) => {
         if (!set) {
             throw new Error("Set not found");
         }
-    
+
         return set;
     }
-    
+
     catch (err) {
         throw err;
-    }    
+    }
 }
 
 export const getCardsFromSet = async (set) => {
     try {
         const res = await fetch(`https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json`);
-        
-        if (!res.ok)
-        {
+
+        if (!res.ok) {
             throw new Error('Unable to load data');
         }
 
@@ -48,7 +39,7 @@ export const getCardsFromSet = async (set) => {
         return filteredCards;
     }
 
-    catch(err) {
+    catch (err) {
         throw err;
     }
 }
@@ -57,15 +48,14 @@ export const getCardFromSetAndNum = async (set, cardNum) => {
     try {
         const cards = await getCardsFromSet(set);
         const card = cards.find((card) => (card.id.split("-")[1] === cardNum))
-        
-        if (!card)
-        {
+
+        if (!card) {
             throw new Error('Card not found');
         }
         return card;
     }
 
-    catch(err) {
+    catch (err) {
         throw err;
     }
 }
@@ -73,9 +63,8 @@ export const getCardFromSetAndNum = async (set, cardNum) => {
 export const searchCards = async (query) => {
     try {
         const res = await fetch(`https://raw.githubusercontent.com/chase-manning/pokemon-tcg-pocket-cards/refs/heads/main/v4.json`);
-        
-        if (!res.ok)
-        {
+
+        if (!res.ok) {
             throw new Error('Unable to load data');
         }
 
@@ -84,7 +73,7 @@ export const searchCards = async (query) => {
         return filteredCards;
     }
 
-    catch(err) {
+    catch (err) {
         throw err;
     }
 }

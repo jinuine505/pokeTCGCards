@@ -1,38 +1,17 @@
-import { useState, useEffect } from "react";
-import { getSets } from "../services/api";
+import { useSets } from "../hooks/useSet";
 import SetCard from "../components/SetCard";
 import "../css/Home.css"
 
 const Home = () => {
-    const [packs, setPacks] = useState([]);
-    const [isLoading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    // Fetch card set data
-    useEffect(() => {
-        const loadSets = async () => {
-            try {
-                const packData = await getSets();
-                setPacks(packData);
-            }
-            catch (err) {
-                setError(err);
-            }
-            finally {
-                setLoading(false);
-            }
-        }
-
-        loadSets();
-    }, [])
+    const {data: sets, isPending, isError, error} = useSets();
 
     return (
         <div className="home">
-            {error && <div className="error">{error}</div>}
+            {isError && <div className="error">{error.message}</div>}
 
-            {isLoading ? (<div className="loading">Loading...</div>) : (<div className="pack-grid">
-                {packs.map((pack, index) => (
-                    <SetCard pack={pack} key={index} />
+            {isPending ? (<div className="loading">Loading...</div>) : (<div className="set-grid">
+                {sets.map((set, index) => (
+                    <SetCard set={set} key={index} />
                 ))}
             </div>)}
 

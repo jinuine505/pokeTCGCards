@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import "../css/SetCard.css";
 
-const PackCard = ({ pack }) => {
+const SetCard = ({ set }) => {
     return (
-        <Link className="pack-card" to={`/${pack.id}`}>
-            <div className="pack-content">
-                <div className="pack-image">
-                    <img src={`${pack.logo}.webp`} alt={pack.id} title={pack.name}/>
+        <Link className="set-card" to={`/${set.id}`}>
+            <div className="set-content">
+                <div className="set-image">
+                    <img src={`${set.logo}.webp`} alt={set.id} title={set.name}/>
                 </div>
-                <div className="pack-info">
-                    <h2>{pack.name}</h2>
+                <div className="set-info">
+                    <h2>{set.name}</h2>
                 </div>
             </div>
         </Link>
     );
 }
  
-export default PackCard;
+export default SetCard;
