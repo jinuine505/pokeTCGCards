@@ -1,4 +1,4 @@
-import { useSets } from "../hooks/useSet";
+import useSets from "../hooks/useSet";
 import SetCard from "../components/SetCard";
 import "../css/Home.css"
 
