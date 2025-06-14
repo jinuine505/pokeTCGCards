@@ -12,6 +12,8 @@ const getSetById = (sets, setId) => {
     return sets.find((set) => formatId(set.id) === formatId(setId));
 }
 
+const clearEx = (name) => name.replace(/\s+ex$/, '');
+
 const VersionsList = ({ card }) => {
     // Load all sets
     const { data: sets, isPending: setsPending, isError: setsError } = useSets();
@@ -28,7 +30,7 @@ const VersionsList = ({ card }) => {
     if (isError) return <div className="error">Error loading data</div>;
 
     // Find all versions of the given card except itself
-    const versions = cards.filter((cardInList) => (cardInList.name.includes(card.name)
+    const versions = cards.filter((cardInList) => (clearEx(cardInList.name) === clearEx(card.name)
         && !(cardInList.id === card.id)));
 
     return (
