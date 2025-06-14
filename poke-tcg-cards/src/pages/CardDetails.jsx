@@ -3,6 +3,7 @@ import useCardDetails from "../hooks/useCardDetails";
 import SetCard from "../components/SetCard";
 import "../css/SetCard.css"
 import CardDetailsCard from "../components/CardDetailsCard";
+import "../css/CardDetails.css"
 
 const CardDetails = () => {
     const { setId, cardNum } = useParams();

@@ -1,0 +1,23 @@
+/* Additional info starts */
+.card-additional-info {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+    margin: 20px auto 10px;
+    border-radius: 10px;
+    max-width: calc(100% - 40px);
+}
+
+/* Set info starts */
+.card-set p {
+    font-size: large;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    color: rgb(13, 13, 13);
+}
+
+.card-set .set-card:hover {
+    transform: scale(1.02);
+}
