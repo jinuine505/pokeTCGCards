@@ -2,11 +2,16 @@ import { useParams } from "react-router";
 import useSetDetails from "../hooks/useSetDetails";
 import CardCard from "../components/CardCard";
 import "../css/SetDetails.css";
+import { useLayoutEffect } from "react";
 
 const SetDetails = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     const { setId } = useParams();
     // Load the set and cards for given setId
-    const { set, setCards, isPending, isError} = useSetDetails(setId);
+    const { set, setCards, isPending, isError } = useSetDetails(setId);
 
     // Check loading state or errors
     if (isPending) return <div className="loading">Loading...</div>

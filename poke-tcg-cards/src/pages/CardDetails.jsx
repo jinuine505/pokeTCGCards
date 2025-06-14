@@ -4,8 +4,13 @@ import SetCard from "../components/SetCard";
 import "../css/CardDetails.css"
 import VersionsList from "../components/VersionsList";
 import CardDetailsCard from "../components/CardDetailsCard";
+import { useLayoutEffect } from "react";
 
 const CardDetails = () => {
+    useLayoutEffect(() => {
+            window.scrollTo(0, 0)
+        });
+
     const { setId, cardNum } = useParams();
 
     // Load the set and card given the setId and the cardNum

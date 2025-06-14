@@ -1,3 +1,13 @@
 .versions-list {
     width: 100%;
 }
+
+.versions-list .no-versions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+    border-radius: 10px;
+}

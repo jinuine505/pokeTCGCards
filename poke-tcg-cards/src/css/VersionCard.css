@@ -20,6 +20,7 @@
 
 .version-card .card-content {
     display: flex;
+    padding: 10px;
     align-items: center;
     width: 100%;
 }
@@ -50,4 +51,8 @@
     .version-card .card-name {
         width: auto;
     }
+
+    .version-card .card-rarity {
+    width: auto;
+}
 }

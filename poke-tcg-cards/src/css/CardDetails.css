@@ -9,7 +9,7 @@
 }
 
 /* Set info starts */
-.info-subheader {
+.card-details .info-subheader {
     font-size: large;
     text-shadow: 0 0 0.2em white;
     padding: 5px;
@@ -18,14 +18,34 @@
     color: rgb(13, 13, 13);
 }
 
-.set-card {
+.card-details .set-card {
     margin: 10px 0;
 }
 
-.card-related p {
+.card-details .card-set img {
+    width: 50%;
+}
+
+.card-details .card-related p {
     margin-top: 10px;
 }
 
 .card-set .set-card:hover {
     transform: scale(1.02);
+}
+
+@media (max-width: 725px) {
+    .card-details .card-set img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-details .card-set img {
+        width: 100%;
+    }
+
+    .card-details .card-set h2 {
+        font-size: larger;
+    }
 }
