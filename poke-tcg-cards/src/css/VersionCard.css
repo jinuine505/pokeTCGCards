@@ -1,0 +1,53 @@
+.version-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+    border-radius: 10px;
+    width: 100%;
+    transition: 0.3s ease-out;
+}
+
+.version-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
+}
+
+.version-card p {
+    color: rgb(13, 13, 13);
+}
+
+.version-card .card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.version-card .card-name {
+    width: 50px;
+    text-align: left;
+}
+
+.version-card .set-name {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.version-card .card-rarity {
+    width: 50px;
+    text-align: right;
+}
+
+@media (max-width: 725px) {
+    .version-card .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .version-card .card-name {
+        width: auto;
+    }
+}

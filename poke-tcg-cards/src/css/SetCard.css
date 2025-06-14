@@ -10,7 +10,7 @@
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
 }
 
-.set-content {
+.set-card .set-content {
     padding: 20px;
 }
 
@@ -23,15 +23,11 @@
     margin: 0 auto;
 }
 
-a{
-    text-decoration: none;
-}
-
-.set-info {
+.set-card .set-info {
     text-align: center;
 }
 
-.set-info h2 {
+.set-card .set-info h2 {
     margin-top: 10px;
     padding: 5px;
     background-color: rgb(245, 245, 245);

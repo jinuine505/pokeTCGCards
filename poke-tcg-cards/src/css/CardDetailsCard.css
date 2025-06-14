@@ -8,11 +8,11 @@
     border-radius: 10px;
 }
 
-.card-content {
+.card-details-card .card-content {
   display: flex;
 }
 
-.card-info {
+.card-details-card .card-info {
     display: flex;
     font-size: x-large;
     line-height: 2;
@@ -23,11 +23,11 @@
 }
 
 @media (max-width: 725px) {
-  .card-content {
+  .card-details-card .card-content {
     flex-direction: column;
   }
   
-  .card-info {
+  .card-details-card .card-info {
     font-size: large;
     line-height: 1.2;
   }

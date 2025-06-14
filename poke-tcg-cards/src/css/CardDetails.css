@@ -11,11 +11,15 @@
 /* Set info starts */
 .info-subheader {
     font-size: large;
-    margin-bottom: 10px;
+    text-shadow: 0 0 0.2em white;
     padding: 5px;
     background-color: rgb(245, 245, 245);
     border-radius: 10px;
     color: rgb(13, 13, 13);
+}
+
+.set-card {
+    margin: 10px 0;
 }
 
 .card-related p {

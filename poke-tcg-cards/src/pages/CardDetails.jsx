@@ -28,7 +28,7 @@ const CardDetails = () => {
                 </div>
                 <div className="card-related">
                     <p className={`info-subheader type-${card.type?.toLowerCase()}`}>Versions</p>
-                    <VersionsList setId={setId} card={card} />
+                    <VersionsList card={card} />
                 </div>
             </div>
         </div>
