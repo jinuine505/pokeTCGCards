@@ -1,5 +1,4 @@
-import useCards from "./useCards";
-import useSets from "./useSet";
+import useCardsAndSets from "./useCardsAndSets";
 import { formatId, getSetById } from "../utility/helperFuncs";
 
 // Helper function
@@ -11,13 +10,7 @@ const getCardsById = (cards, setId) => {
 
 const useSetDetails = (setId) => {
     // Load the sets and cards
-    const { data: sets, isPending: setsPending, isError: setsError } = useSets();
-    const { data: cards, isPending: cardsPending, isError: cardsError } = useCards();
-
-    // Consolidate isPending from both queries
-    const isPending = setsPending || cardsPending;
-    // Consolidate isError from both queries
-    const isError = setsError || cardsError;
+    const { cards, sets, isPending, isError } = useCardsAndSets();
     
     const set = getSetById(sets, setId);
     const setCards = getCardsById(cards, setId);

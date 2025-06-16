@@ -1,5 +1,4 @@
-import useCards from "../hooks/useCards";
-import useSets from "../hooks/useSet";
+import useCardsAndSets from "../hooks/useCardsAndSets";
 import VersionCard from "./VersionCard";
 import { formatId, getSetById } from "../utility/helperFuncs";
 import "../css/VersionsList.css"
@@ -8,15 +7,8 @@ import "../css/VersionsList.css"
 const clearEx = (name) => name.replace(/\s+ex$/, '');
 
 const VersionsList = ({ card }) => {
-    // Load all sets
-    const { data: sets, isPending: setsPending, isError: setsError } = useSets();
-    // Load all cards
-    const { data: cards, isPending: cardsPending, isError: cardsError } = useCards();
-
-    // Consolidate isPending from both queries
-    const isPending = setsPending || cardsPending;
-    // Consolidate isError from both queries
-    const isError = setsError || cardsError;
+    // Load all cards and sets
+    const { cards, sets, isPending, isError } = useCardsAndSets();
 
     // Check loading state or errors
     if (isPending) return <div className="loading">Loading...</div>
