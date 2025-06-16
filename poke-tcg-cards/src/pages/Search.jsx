@@ -13,11 +13,15 @@ const Search = () => {
     const searchQuery = serachParams.get("query");
 
     // Filter cards by query
-    const { filteredCards, isLoading, isError } = useCardSearch(searchQuery);
+    const { filteredCards, isPending, isError } = useCardSearch(searchQuery);
 
     // Load all sets
     const { data: sets } = useSets();
 
+    // Check loading state or errors
+    if (isPending) return <div className="loading">Loading...</div>
+    if (isError) return <div className="error">Error loading data</div>;
+    
     return (
         <div className="search-results">
             <div className="search-results-header">Results for: "{searchQuery}"</div>
