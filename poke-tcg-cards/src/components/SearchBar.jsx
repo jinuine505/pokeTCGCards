@@ -1,0 +1,29 @@
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import "../css/SearchBar.css"
+
+const SearchBar = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/search?query=${searchQuery.trim()}`);
+    };
+
+    return (
+        <form className="search-bar " onSubmit={handleSubmit}>
+            <input className="search-input"
+                type="text"
+                placeholder="Search Cards"
+                value={searchQuery}
+                onChange={(e) => { setSearchQuery(e.target.value) }}
+            />
+            <button className="search-btn" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+        </form>
+    );
+}
+
+export default SearchBar;

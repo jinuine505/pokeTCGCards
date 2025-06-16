@@ -5,6 +5,7 @@ import Favorites from './pages/Starred';
 import { Routes, Route } from 'react-router';
 import SetDetails from './pages/SetDetails';
 import CardDetails from './pages/CardDetails';
+import Search from './pages/Search';
 
 function App() {
 
@@ -14,10 +15,11 @@ function App() {
         <NavBar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />}/>
-             <Route path="/favorites" element={<Favorites />}/>
-             <Route path="/:setId" element={<SetDetails />}/>
-             <Route path="/:setId/:cardNum" element={<CardDetails />}/>
+            <Route path="/" element={<Home />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/:setId" element={<SetDetails />} />
+            <Route path="/:setId/:cardNum" element={<CardDetails />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </div>
       </div>

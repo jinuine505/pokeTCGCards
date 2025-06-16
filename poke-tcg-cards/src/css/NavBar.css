@@ -17,6 +17,12 @@
     text-decoration: none;
 }
 
+.nav-search-bar {
+    margin-left: 20px;
+    width: 60%;
+    flex: 1;
+}
+
 .nav-links a{
     display: flex;
     display: inline-flex;

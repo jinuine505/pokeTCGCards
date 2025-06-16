@@ -9,7 +9,7 @@
     color: rgb(13, 13, 13);
 }
 
-.set-details .card-grid {
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 15px;
