@@ -1,15 +1,8 @@
 import useCards from "./useCards";
 import useSets from "./useSet";
+import { formatId, getSetById } from "../utility/helperFuncs";
 
-// Helper functions
-const formatId = (id) => id.toLowerCase().replace(/-/g, '');
-
-const getSetById = (sets, setId) => {
-    // Assign the set from given setId, or else null
-    if (!Array.isArray(sets)) return null;
-    return sets.find((set) => formatId(set.id) === formatId(setId));
-}
-
+// Helper function
 const getCardsById = (cards, setId) => {
     // Assign the cards from given setId, or else empty array
     if (!Array.isArray(cards)) return [];

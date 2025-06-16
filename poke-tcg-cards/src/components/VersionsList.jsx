@@ -1,17 +1,10 @@
 import useCards from "../hooks/useCards";
 import useSets from "../hooks/useSet";
 import VersionCard from "./VersionCard";
+import { formatId, getSetById } from "../utility/helperFuncs";
 import "../css/VersionsList.css"
 
-// Helper functions
-const formatId = (id) => id.toLowerCase().replace(/-/g, '');
-
-const getSetById = (sets, setId) => {
-    // Assign the set from given setId, or else null
-    if (!Array.isArray(sets)) return null;
-    return sets.find((set) => formatId(set.id) === formatId(setId));
-}
-
+// Helper function
 const clearEx = (name) => name.replace(/\s+ex$/, '');
 
 const VersionsList = ({ card }) => {

@@ -1,7 +1,8 @@
 import { useLocation } from "react-router";
-import useCards from "../hooks/useCards";
 import CardCard from "../components/CardCard";
 import useCardSearch from "../hooks/useCardSearch";
+import useSets from "../hooks/useSet";
+import { formatId } from "../utility/helperFuncs";
 import "../css/SetDetails.css"
 
 const Search = () => {
@@ -10,13 +11,17 @@ const Search = () => {
     const serachParams = new URLSearchParams(location.search);
     const searchQuery = serachParams.get("query");
 
+    // Load 
     const { filteredCards, isLoading, isError } = useCardSearch(searchQuery);
+    const { data: sets } = useSets();
 
     return (
         <div className="card-grid">
-            {filteredCards.map((card) => (
-                    <CardCard card={card} setId={card.id} key={card.id} />
-                ))}
+            {filteredCards.map((card) => {
+                const cardId = card.id.split("-")[0];
+                const match = sets.find((set) => formatId(set.id) === cardId);
+                return <CardCard card={card} setId={match.id} key={card.id} />
+            })}
         </div>
     );
 }
