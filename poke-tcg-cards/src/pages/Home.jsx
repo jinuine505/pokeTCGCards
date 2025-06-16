@@ -11,7 +11,6 @@ const Home = () => {
 
     return (
         <div className="home">
-
             {<div className="set-grid">
                 {sets.map((set, index) => (<SetCard set={set} key={index} />))}
             </div>}

@@ -19,6 +19,7 @@ const SearchBar = () => {
                 type="text"
                 placeholder="Search Cards"
                 value={searchQuery}
+                required
                 onChange={(e) => { setSearchQuery(e.target.value) }}
             />
             <button className="search-btn" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
