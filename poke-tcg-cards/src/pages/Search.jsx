@@ -2,8 +2,9 @@ import { useLocation } from "react-router";
 import CardCard from "../components/CardCard";
 import useCardSearch from "../hooks/useCardSearch";
 import useSets from "../hooks/useSet";
-import { formatId } from "../utility/helperFuncs";
-import "../css/SetDetails.css"
+import "../css/Search.css"
+
+const formatId = (id) => id.toLowerCase().replace(/-/g, '');
 
 const Search = () => {
     // Extract query
@@ -11,18 +12,26 @@ const Search = () => {
     const serachParams = new URLSearchParams(location.search);
     const searchQuery = serachParams.get("query");
 
-    // Load 
+    // Filter cards by query
     const { filteredCards, isLoading, isError } = useCardSearch(searchQuery);
+
+    // Load all sets
     const { data: sets } = useSets();
 
     return (
-        <div className="card-grid">
-            {filteredCards.map((card) => {
-                const cardId = card.id.split("-")[0];
-                const match = sets.find((set) => formatId(set.id) === cardId);
-                return <CardCard card={card} setId={match.id} key={card.id} />
-            })}
+        <div className="search-results">
+            <div className="search-results-header">Results for: "{searchQuery}"</div>
+            <div className="card-grid">
+                {filteredCards.map((card) => {
+                    // Match formats of two different card set ids (ex. A-1 === a1)
+                    const cardSet = card.id.split("-")[0];
+                    const match = sets.find((set) => formatId(set.id) === cardSet);
+
+                    return <CardCard card={card} setId={match.id} key={card.id} />
+                })}
+            </div>
         </div>
+
     );
 }
 

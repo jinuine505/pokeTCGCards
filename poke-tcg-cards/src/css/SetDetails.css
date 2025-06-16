@@ -1,4 +1,4 @@
-.set-details .set-name {
+.search-results-header {
     width: fit-content;
     margin: 10px auto 0;
     max-width: calc(100% - 40px);
@@ -9,7 +9,7 @@
     color: rgb(13, 13, 13);
 }
 
-.card-grid {
+.set-details .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 15px;
