@@ -30,6 +30,10 @@
     cursor: pointer;
 }
 
+.search-bar .search-btn:focus {
+    outline: none;
+}
+
 .search-bar .search-btn:hover {
     color: rgb(235, 63, 80);
 }
