@@ -21,11 +21,11 @@ const Search = () => {
     // Check loading state or errors
     if (isPending) return <div className="loading">Loading...</div>
     if (isError) return <div className="error">Error loading data</div>;
-    
+
     return (
         <div className="search-results">
             <div className="search-results-header">Results for: "{searchQuery}"</div>
-            <div className="card-grid">
+            {(filteredCards.length === 0) ? (<div className="no-result">No matches found</div>) : (<div className="card-grid">
                 {filteredCards.map((card) => {
                     // Match formats of two different card set ids (ex. A-1 === a1)
                     const cardSet = card.id.split("-")[0];
@@ -33,7 +33,7 @@ const Search = () => {
 
                     return <CardCard card={card} setId={match.id} key={card.id} />
                 })}
-            </div>
+            </div>)}
         </div>
 
     );
