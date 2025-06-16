@@ -22,7 +22,7 @@ const useCardSearch = (searchQuery) => {
         return cards.filter((card) =>
             (searchKeys.every((key) => (card.name.toLowerCase().includes(key))))
         )
-    }, [searchQuery]);
+    }, [cards, searchQuery]);
 
     return { filteredCards, isPending, isError };
 }
