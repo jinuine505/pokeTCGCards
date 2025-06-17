@@ -19,10 +19,10 @@ const CardCard = ({ card, setId }) => {
                         <img src={`${card.image}`} alt={card.id} title={card.name} />
                         <div className="card-overlay">
                             <div className="card-btns">
-                                <button className="collect-btn" onClick={handleClick}>
+                                <button className="collect-btn" title="Check" onClick={handleClick}>
                                     <FontAwesomeIcon icon={faCheck} />
                                 </button>
-                                <button className="save-btn" onClick={handleClick}>
+                                <button className="save-btn" title="Star" onClick={handleClick}>
                                     <FontAwesomeIcon icon={faStar} />
                                 </button>
                             </div>

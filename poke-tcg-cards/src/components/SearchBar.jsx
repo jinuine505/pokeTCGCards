@@ -32,7 +32,7 @@ const SearchBar = () => {
                 required
                 onChange={(e) => { setSearchQuery(e.target.value) }}
             />
-            <button className="search-btn" type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+            <button className="search-btn" type="submit" title="Search"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
         </form>
     );
 }
