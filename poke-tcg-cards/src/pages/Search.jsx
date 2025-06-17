@@ -9,8 +9,8 @@ const formatId = (id) => id.toLowerCase().replace(/-/g, '');
 const Search = () => {
     // Extract query
     const location = useLocation();
-    const serachParams = new URLSearchParams(location.search);
-    const searchQuery = serachParams.get("query");
+    const searchParams = new URLSearchParams(location.search);
+    const searchQuery = searchParams.get("query");
 
     // Filter cards by query
     const { filteredCards, isPending, isError } = useCardSearch(searchQuery);

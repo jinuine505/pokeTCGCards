@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from "react-router";
 import "../css/SearchBar.css"
 
 const SearchBar = () => {
     const [searchQuery, setSearchQuery] = useState('');
-    const navigate = useNavigate();;
+    const navigate = useNavigate();
+
+    // Extract query
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+
+    // Update search bar with query in the url
+    useEffect(() => {
+        setSearchQuery(searchParams.get("query") || "");
+    }, [location.search])
 
     const handleSubmit = (e) => {
         e.preventDefault();
