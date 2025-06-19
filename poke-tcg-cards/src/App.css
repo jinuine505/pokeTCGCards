@@ -1,3 +1,15 @@
 #root {
   text-align: center;
 }
+
+.error,
+.loading {
+  width: fit-content;
+  margin: 10px auto 0;
+  max-width: calc(100% - 40px);
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+  border-radius: 10px;
+  color: rgb(13, 13, 13);
+}
