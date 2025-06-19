@@ -17,7 +17,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/starred" element={<Favorites />} />
             <Route path="/:setId" element={<SetDetails />} />
             <Route path="/:setId/:cardNum" element={<CardDetails />} />
             <Route path="/search" element={<Search />} />

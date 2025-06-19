@@ -16,7 +16,7 @@ const NavBar = () => {
             </div>
             <div className="nav-links">
                 <Link className="nav-link" to="/" title="Home"><FontAwesomeIcon icon={faHouse} /></Link>
-                <Link className="nav-link" to="/favorites" title="Starred"><FontAwesomeIcon icon={faStar} /></Link>
+                <Link className="nav-link" to="/starred" title="Starred"><FontAwesomeIcon icon={faStar} /></Link>
             </div>
         </nav>
     );
