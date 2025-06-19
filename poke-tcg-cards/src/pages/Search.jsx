@@ -2,9 +2,9 @@ import { useLocation } from "react-router";
 import CardCard from "../components/CardCard";
 import useCardSearch from "../hooks/useCardSearch";
 import useSets from "../hooks/useSet";
+import { formatId } from "../utility/helperFuncs";
 import "../css/Search.css"
 
-const formatId = (id) => id.toLowerCase().replace(/-/g, '');
 
 const Search = () => {
     // Extract query

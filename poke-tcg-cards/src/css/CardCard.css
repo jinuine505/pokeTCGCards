@@ -5,6 +5,7 @@
     border: none;
     transition: 0.3s ease-out;
 }
+
 .card-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
@@ -21,7 +22,8 @@
     gap: 10px;
 }
 
-.card-card .collect-btn, .card-card .save-btn {
+.card-card .collect-btn,
+.card-card .star-btn {
     cursor: pointer;
     height: 2.5em;
     width: 50%;
@@ -33,14 +35,19 @@
     transition: 0.3s ease;
 }
 
-.card-card .collect-btn:active, .card-card .save-btn:active {
+.card-card .starred {
+    color: rgb(255, 191, 0);
+}
+
+.card-card .collect-btn:active,
+.card-card .star-btn:active {
     transform: scale(0.95);
 }
 
 
-.card-card .collect-btn:hover, .save-btn:hover {
+.card-card .collect-btn:hover,
+.star-btn:hover {
     background-color: rgba(226, 226, 226, 0.99);
-
 }
 
 .card-card .card-image {
