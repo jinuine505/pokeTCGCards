@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router';
 import SetDetails from './pages/SetDetails';
 import CardDetails from './pages/CardDetails';
 import Search from './pages/Search';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/:setId" element={<SetDetails />} />
             <Route path="/:setId/:cardNum" element={<CardDetails />} />
             <Route path="/search" element={<Search />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

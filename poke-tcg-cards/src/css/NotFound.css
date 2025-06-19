@@ -1,0 +1,28 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+}
+
+.not-found-card {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(33, 33, 33, 0.75);
+}
+
+
+.not-found-card img{
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.not-found-card .not-found-msg {
+    color: rgb(13, 13, 13);
+    margin-top: 10px;
+}
