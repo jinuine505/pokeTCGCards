@@ -4,50 +4,39 @@
     border-radius: 10px;
     border: none;
     transition: 0.3s ease-out;
-    cursor: pointer;
 }
 .card-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 10px -5px rgb(33, 33, 33, 0.75);
 }
 
-.card-card:active {
-    transform: scale(.95);
-}
-
 .card-card .card-content {
     padding: 10px;
 }
 
-.card-card .card-overlay {
-    position: absolute;
-    background-color: rgb(35, 35, 35, 0.6);
-    border-radius: 30px;
-    padding: 3px;
-    top: 5px;
-    left: 5px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.card-card:hover .card-overlay {
-  opacity: 1;
-}
-
-.card-card .collect-btn {
-    margin-right: 5px;
+.card-card .card-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6px;
+    gap: 10px;
 }
 
 .card-card .collect-btn, .card-card .save-btn {
     cursor: pointer;
     height: 2.5em;
-    width: 2.5em;
+    width: 50%;
     padding: 5px;
-    border-radius: 50%;
+    border-radius: 10px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgb(245, 245, 245);
+    color: rgb(13, 13, 13);
     transition: 0.3s ease;
 }
+
+.card-card .collect-btn:active, .card-card .save-btn:active {
+    transform: scale(0.95);
+}
+
 
 .card-card .collect-btn:hover, .save-btn:hover {
     background-color: rgba(226, 226, 226, 0.99);
@@ -57,7 +46,6 @@
 .card-card .card-image {
     width: fit-content;
     margin: 0 auto;
-    position: relative;
 }
 
 .card-card .card-image img {
