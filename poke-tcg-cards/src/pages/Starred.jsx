@@ -6,10 +6,6 @@ import { useLayoutEffect } from "react";
 import "../css/Starred.css"
 
 const Starred = () => {
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    });
-
     const { starred } = useStarredContext();
 
     // Load all sets
