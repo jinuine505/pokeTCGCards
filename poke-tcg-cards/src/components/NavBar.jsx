@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faStar } from '@fortawesome/free-solid-svg-icons';
 import '../css/NavBar.css';
-import logo from '../assets/pokeball.webp';
+import logo from '/pokeball.webp';
 import SearchBar from './SearchBar';
 
 const NavBar = () => {
