@@ -3,14 +3,12 @@ import { getSetById } from "../services/api";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useStarredContext } from "../context/StarredContext";
-import { useCollectedContext } from "../context/CollectedContext";
 import "../css/CardDetailsCard.css";
 import "../css/CardDetailsStyling.css";
 
 const CardDetailsCard = ({ card }) => {
-    const handleCollect = (e) => {
+    const handleComplete = (e) => {
         e.preventDefault();
-        toggleCollected(card);
     }
 
     const handleStar = (e) => {
@@ -19,8 +17,6 @@ const CardDetailsCard = ({ card }) => {
     }
 
     const { toggleStarred, isStarred } = useStarredContext();
-    const { toggleCollected, isCollected } = useCollectedContext();
-
 
     const isRare = card.rarity.includes('☆') || card.rarity.includes('♕') || card.fullart === "Yes";
 
@@ -28,9 +24,9 @@ const CardDetailsCard = ({ card }) => {
         <div className={`card-details-card ${isRare ? "gold-shadow" : ""} type-${card.type?.toLowerCase()}`}>
             <div className="card-content">
                     <div className="card-image">
-                        <img className={isCollected(card) ? "collected" : ""} src={`${card.image}`} alt={card.id} title={card.name} />
+                        <img src={`${card.image}`} alt={card.id} title={card.name} />
                         <div className="card-btns">
-                        <button className={`collect-btn ${isCollected(card) ? "collected" : ""}`} title="Check" onClick={handleCollect}>
+                        <button className="collect-btn" title="Check" onClick={handleComplete}>
                             <FontAwesomeIcon icon={faCheck} />
                         </button>
                         <button className={`star-btn ${isStarred(card) ? "starred" : ""}`} title="Star" onClick={handleStar}>
