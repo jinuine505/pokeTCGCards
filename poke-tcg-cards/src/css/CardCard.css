@@ -24,6 +24,7 @@
 
 .card-card .collect-btn,
 .card-card .star-btn {
+    font-size: medium;
     cursor: pointer;
     height: 2.5em;
     width: 50%;
@@ -37,6 +38,19 @@
 
 .card-card .starred {
     color: rgb(255, 191, 0);
+}
+
+.card-card .collected {
+    color: rgb(68, 178, 0);
+}
+
+.card-card img {
+    filter: brightness(50%);
+    transition: 0.1s;
+}
+
+.card-card img.collected {
+    filter: brightness(100%);
 }
 
 .card-card .collect-btn:active,
