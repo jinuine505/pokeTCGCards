@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
-import Favorites from './pages/Starred';
+import Starred from './pages/Starred';
 import { Routes, Route } from 'react-router';
 import SetDetails from './pages/SetDetails';
 import CardDetails from './pages/CardDetails';
@@ -17,7 +17,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/starred" element={<Favorites />} />
+            <Route path="/starred" element={<Starred />} />
             <Route path="/:setId" element={<SetDetails />} />
             <Route path="/:setId/:cardNum" element={<CardDetails />} />
             <Route path="/search" element={<Search />} />
