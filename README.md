@@ -24,7 +24,7 @@ Prerequisites
 1. Clone the repository
  
 ```bash
-git clone https://github.com/YOUR_USERNAME/pokemon-tcg-pocket-tracker.git
+git clone https://github.com/jinuine505/pokemon-tcg-pocket-tracker.git
 cd pokemon-tcg-pocket-tracker/poke-tcg-cards
 ```
 2. Install dependencies
