@@ -42,7 +42,7 @@ npm run dev
 yarn dev
 ```
 
-<h2>Site images</h2>
+## Site images
 <img width="1728" alt="Image" src="https://github.com/user-attachments/assets/b0c89a77-420a-4cd4-8b3d-7fade90d54d0" />
 <img width="1728" alt="Image" src="https://github.com/user-attachments/assets/5db7829d-ed13-43da-962e-59de7b1093d4" />
 <img width="1728" alt="Image" src="https://github.com/user-attachments/assets/a4473fb5-5df7-4045-85c1-4327eb2915a2" />
