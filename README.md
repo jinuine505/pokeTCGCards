@@ -2,13 +2,13 @@
 A site to track which cards you've collected in the Pokémon TCG Pocket game. This project keeps your collection organized and tracks the cards you want to obtain.
 
 ## Features
-- Site automatically adds new sets/cards as they are added to the game
-- Cards are grayed out until marked as collected
-- Star cards to save desired cards and view them in the starred cards page
-- Search for any card in the game
-- View information about a card's set origin and any alternative versions
-- Collected and starred cards saved to local storage
-- Desktop and mobile viewing
+* Site automatically adds new sets/cards as they are added to the game
+* Cards are grayed out until marked as collected
+* Star cards to save desired cards and view them in the starred cards page
+* Search for any card in the game
+* View information about a card's set origin and any alternative versions
+* Collected and starred cards saved to local storage
+* Desktop and mobile viewing
 
 ## Data Sources
 1. Set data, including their name and image[^1], is obtained from [TCGdex](https://tcgdex.dev/tcg-pocket), which contains detailed data about the Pokémon TCG. This project uses their Pokémon TCG Pocket data specifically.
@@ -18,8 +18,8 @@ A site to track which cards you've collected in the Pokémon TCG Pocket game. Th
 
 ## Running Locally
 Prerequisites
-- Node.js
-- npm or yarn
+* Node.js
+* npm or yarn
 
 1. Clone the repository
  
