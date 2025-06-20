@@ -11,8 +11,10 @@ A site to track which cards you've collected in the Pokémon TCG Pocket game. Th
 - Desktop and mobile viewing
 
 ## Data Sources
-1. Set data, including their name and image, is obtained from [TCGdex](https://tcgdex.dev/tcg-pocket), which contains detailed data about the Pokémon TCG. This project uses their Pokémon TCG Pocket data specifically.
+1. Set data, including their name and image[^1], is obtained from [TCGdex](https://tcgdex.dev/tcg-pocket), which contains detailed data about the Pokémon TCG. This project uses their Pokémon TCG Pocket data specifically.
 2. Card data, including their name, set origin, image, health, type, rarity, and illustrator, is obtained from [pokemon-tcg-pocket-cards](https://github.com/chase-manning/pokemon-tcg-pocket-cards/blob/main/README.md). This is an open-source repository containing data on the Pokémon TCG Pocket Cards
+
+[^1]: Currently, TCGdex does not include the image for set A3a in their database
 
 ## Running Locally
 Prerequisites
