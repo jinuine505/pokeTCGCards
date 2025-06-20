@@ -44,6 +44,7 @@ const CardDetailsCard = ({ card }) => {
                     <p className="card-type">{`Type: ${card.type}`}</p>
                     <p className="card-rarity">{`Rarity: ${card.rarity}`}</p>
                     <p className="card-artist">{`Artist: ${card.artist}`}</p>
+                    <p className="card-pack">{`Pack: ${card.pack}`}</p>
                 </div>
             </div>
         </div>
