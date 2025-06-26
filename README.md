@@ -21,7 +21,7 @@ A site to track which cards you've collected in the Pokémon TCG Pocket game. Th
 2. [Vite](https://vite.dev/) - Frontend build tool
 3. [TanStack Query](https://tanstack.com/query/latest) - A data-fetching library
 
-This project was bootstrapped using **Vite**. All components are built with **ReactJS**.
+This project was bootstrapped using **Vite**. All components are built with **ReactJS**. Data fetching and caching are handled with **TanStack Query**.
 
 ## Libraries
 1. [Font Awesome](https://fontawesome.com/) - An icon library and toolkit for the icons in this project
