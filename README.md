@@ -16,6 +16,17 @@ A site to track which cards you've collected in the Pokémon TCG Pocket game. Th
 
 [^1]: Currently, TCGdex does not include the image for set A3a in their database
 
+## Tech Stack
+1. [ReactJS](https://reactjs.org/) - Component-based JavaScript library
+2. [Vite](https://vite.dev/) - Frontend build tool
+3. [TanStack Query](https://tanstack.com/query/latest) - A data-fetching library
+
+This project was bootstrapped using **Vite**. All components are built with **ReactJS**.
+
+## Libraries
+1. [Font Awesome](https://fontawesome.com/) - An icon library and toolkit for the icons in this project
+2. [React Router](https://reactrouter.com/) - A library for handling routing and navigation
+
 ## Running Locally
 Prerequisites
 * Node.js
