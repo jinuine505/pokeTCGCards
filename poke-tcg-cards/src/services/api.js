@@ -1,5 +1,7 @@
 export const getSets = async () => {
-    const res = await fetch('https://api.tcgdex.net/v2/en/series/tcgp');
+    const res = await fetch('https://api.tcgdex.net/v2/en/series/tcgp', {
+        cache: "no-cache"
+    });
 
     if (!res.ok) {
         throw new Error('Unable to load sets');
